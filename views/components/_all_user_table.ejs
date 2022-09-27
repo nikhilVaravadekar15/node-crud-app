@@ -1,0 +1,51 @@
+<!-- form handling -->
+<form action="/" method="POST">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>@Email</th>
+                <th>Gender</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody class="thead-dark">
+
+            <% for(var i = 0; i < users.length; i++) { %>
+                <tr id="<%= users[i]._id %>">
+                    <td><%= i + 1 %></td>
+                    <td><%= users[i].name %></td>
+                    <td><%= users[i].email %></td>
+                    <% if (users[i].gender) { %>
+                        <td><%= users[i].gender %></td>
+                    <% } %>
+                    <% if (!users[i].gender) { %>
+                        <td>-</td>
+                    <% } %>
+                    <% if (users[i].status) { %>
+                        <td>Active</td>
+                    <% } %>
+                    <% if (!users[i].status) { %>
+                        <td>Inactive</td>
+                    <% } %>
+                    <td style="display: flex; align-items: center; justify-content: space-evenly;">
+                        <a href="/update-user?id=<%= users[i]._id %>" class="btn update" title="Edit">
+                            <span class="image-gradient">
+                                <img src="/images/pen-to-square-regular.svg" alt="" draggable="false">
+                            </span>
+                        </a>
+                        <a class="btn delete" title="Delete" data-id="<%= users[i]._id %>">
+                            <span class="image-gradient">
+                                <img src="/images/xmark-solid.svg" alt="" draggable="false">
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+            <% } %>
+
+        </tbody>
+    </table>
+</form>

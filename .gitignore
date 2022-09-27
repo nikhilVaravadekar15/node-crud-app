@@ -1,0 +1,8 @@
+/node_modules
+/mongo_db
+.env
+*.wt
+*.lock
+*.turtle
+*.bson
+WiredTiger

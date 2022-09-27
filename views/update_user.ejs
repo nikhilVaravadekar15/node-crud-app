@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>CRUD APP | update User</title>
+</head>
+
+<body>
+
+    <!-- header -->
+    <%- include('components/_header') %>
+    <!-- /header -->
+
+    <main id="site-main">
+        <div class="container">
+
+            <div class="box-nav d-flex justify-between">
+                <a href="/" class="border-shadow">
+                    <span class="text-gradient">
+                        All Users
+                        <img src="/images/user-group-solid.svg" alt="" draggable="false">
+                    </span>
+                </a>
+            </div>
+
+            <div class="form-title text-center">
+                <h2 class="text-dark">Update User</h2>
+                <span class="text-light">Use the below form to Update an account</span>
+            </div>
+
+            <!-- main add user form -->
+            <%- include('components/_update_user_form') %>
+
+        </div>
+    </main>
+
+    <%- include('components/_footer') %>
+
+</body>
+
+</html>

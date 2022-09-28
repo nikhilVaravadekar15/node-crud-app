@@ -1,0 +1,123 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "crud_node_app_collection",
+    "dateExported": "2022-09-27T18:41:30.839Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9b01c01c-bd9a-4a6a-b190-6f8359b389ce",
+            "colId": "3297d366-48de-4ce6-95bc-ae12998738b0",
+            "containerId": "",
+            "name": "req__create_user",
+            "url": "http://localhost:3000/api/user",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2022-09-25T09:44:23.618Z",
+            "modified": "2022-09-25T13:50:24.512Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "jeff bezos"
+                    },
+                    {
+                        "name": "email",
+                        "value": "jeff_bezos@gmail.com"
+                    },
+                    {
+                        "name": "status",
+                        "value": "active"
+                    },
+                    {
+                        "name": "gender",
+                        "value": ""
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "32036c5e-daad-46dc-b67a-c0c4d2d63660",
+            "colId": "3297d366-48de-4ce6-95bc-ae12998738b0",
+            "containerId": "",
+            "name": "req__get_user",
+            "url": "http://localhost:3000/api/user/633055abcd344c66dc3bde7a",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2022-09-25T13:34:31.707Z",
+            "modified": "2022-09-25T13:55:13.089Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b761ac73-d4e5-4cb7-af42-6e887b3b17fe",
+            "colId": "3297d366-48de-4ce6-95bc-ae12998738b0",
+            "containerId": "",
+            "name": "req__get_all_users",
+            "url": "http://localhost:3000/api/users",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2022-09-25T13:39:31.908Z",
+            "modified": "2022-09-25T14:03:39.338Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d158db05-4812-4d6a-9d35-f584a095e9c0",
+            "colId": "3297d366-48de-4ce6-95bc-ae12998738b0",
+            "containerId": "",
+            "name": "req__update_user",
+            "url": "http://localhost:3000/api/user/633055abcd344c66dc3bde7a",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2022-09-25T13:36:38.104Z",
+            "modified": "2022-09-25T13:36:38.104Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "elon musk"
+                    },
+                    {
+                        "name": "email",
+                        "value": "elon_musk@outlook.com"
+                    },
+                    {
+                        "name": "status",
+                        "value": "active"
+                    },
+                    {
+                        "name": "gender",
+                        "value": "male"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "fd400ea2-1069-40fe-9ca2-df98e87ca890",
+            "colId": "3297d366-48de-4ce6-95bc-ae12998738b0",
+            "containerId": "",
+            "name": "req__delete_user",
+            "url": "http://localhost:3000/api/user/633055abcd344c66dc3bde7a",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2022-09-25T13:50:49.271Z",
+            "modified": "2022-09-25T13:51:09.997Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

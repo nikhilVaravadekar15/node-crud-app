@@ -8,20 +8,20 @@ services:
     ports:
       - 2727:27017
     environment:
-      MONGO_INITDB_DATABASE: user_db
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
     volumes:
-      - ./server/database/mongo_db:/data/db
+      - ${MONGO_VOLUMES_HOST_PATH}:/data/db
 
   node_api:
     container_name: node_api
     build:
       dockerfile: Dockerfile
     ports:
-      - 3000:3000
+      - ${PORT}:${PORT}
     environment:
-      - PORT=3000
-      - MONGODB_URI=mongodb://admin:password@mongo_database:27017
+      - PORT=${PORT}
+      - MONGODB_URI=${MONGODB_URI}
     depends_on:
       - mongo_db
